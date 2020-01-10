@@ -1,3 +1,12 @@
+.politician__container {
+    display: flex;
+    flex-wrap: wrap;
+}
 .politician__card {
-    margin: 20px
+    margin: 20px;
+    border: 1px solid black;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
