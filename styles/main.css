@@ -1,4 +1,16 @@
-.politician__container {
+body {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.politicians__container {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center
+}
+.politicians {
     display: flex;
     flex-wrap: wrap;
 }

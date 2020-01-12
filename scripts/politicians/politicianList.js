@@ -8,7 +8,9 @@ const PoliticianList = () => {
 
     const render = () => {
         contentTarget.innerHTML = `
+        
         <h1>Politicians</h1>
+        <div class="politicians">
         ${
             politicians.map(
                 politician => {
@@ -18,6 +20,7 @@ const PoliticianList = () => {
             ).join("")
 
         } 
+        </div>
         `
     }
     render()
