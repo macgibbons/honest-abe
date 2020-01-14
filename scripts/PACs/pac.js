@@ -1,7 +1,8 @@
-const Pac = (pac) => {
+const Pac = (pac, corporations) => {
+
     return`
-    <article class="pacs">
-    <section class="pac">
+    
+    <section class="pac__card">
         <header class="pac__name">
             <h1>${pac.registeredName}</h1>
         </header>
@@ -11,12 +12,18 @@ const Pac = (pac) => {
         <div class="pac__donors">
             <h2>Donors</h2>
             <ul>
-                <li>XLEEN ($2,103)</li>
-                <li>TALAE ($50,192)</li>
+                ${
+                    corporations.map(
+                        corporation => {
+                            return `<li>${corporation.name}($${(corporation.amount).toFixed(0).replace(/\d(?=(\d{3})+\.)/g, '$&,')
+                            })</li>`
+                        }
+                    ).join("")
+                }
             </ul>
         </div>
     </section>
-    </article>`
+    `
 
 }
 
